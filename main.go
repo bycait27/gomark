@@ -3,10 +3,15 @@ package main
 import (
 	"net/http"
 
+	"gomark/database"
+
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	// connect to postgres database
+	database.Connect()
+
 	// initialize gin router
 	r := gin.Default()
 
